@@ -1,3 +1,10 @@
+// Métadonnées spécifiques à la page Réalisations — surcharge le titre global
+export const metadata = {
+	title: 'Réalisations',
+	description:
+		'Projets web livrés par Agence DBD : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
+}
+
 import PageIntro from '@/components/PageIntro'
 import Container from '@/components/Container'
 import FadeIn, { FadeInStagger } from '@/components/FadeIn'
