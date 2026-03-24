@@ -16,9 +16,8 @@ export default function Home() {
 					</h1>
 					<p className="mt-6 text-xl text-neutral-600">
 						Je prends le temps de comprendre votre activité pour concevoir un
-						site que votre public trouve utile et que Google met en avant.{' '}
-						<br />
-						Vous restez concentré sur votre métier.
+						site que votre public trouve utile et que Google met en avant.
+						Vous restez concentré sur votre métier. Vos clients vous trouvent.
 					</p>
 				</FadeIn>
 			</Container>
