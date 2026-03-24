@@ -1,3 +1,10 @@
+// Métadonnées spécifiques à la page À propos — surcharge le titre global
+export const metadata = {
+	title: 'À propos',
+	description:
+		"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit au service de votre présence en ligne.",
+}
+
 import Container from '@/components/Container'
 import Cultures from '@/components/Cultures'
 import FadeIn from '@/components/FadeIn'
