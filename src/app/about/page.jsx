@@ -24,7 +24,7 @@ const AboutPage = () => {
 			{/* Photo + texte détaillé */}
 			<Container className="mt-16">
 				<FadeIn>
-					<div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2 items-start">
+					<div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-[auto_1fr] items-start">
 						<div className="max-w-xs overflow-hidden rounded-2xl">
 							<Image
 								src={photoJulien}
