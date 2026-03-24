@@ -11,12 +11,12 @@ const ContactDetails = () => {
       <h2 className="font-display text-base font-semibold text-neutral-950">
         Localisation
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
+      <p className="mt-7 text-base text-neutral-600">
         Basé au Pont-de-Beauvoisin, en Auvergne-Rhône-Alpes. Disponible en
         remote partout en France.
       </p>
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
-      <Border className="mt-16 pt-16">
+      {/* <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" /> */}
+      <Border className="mt-12 pt-8">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Me contacter directement
         </h2>
@@ -43,7 +43,7 @@ const ContactDetails = () => {
           ))}
         </dl>
       </Border>
-      <Border className="mt-16 pt-16">
+      <Border className="mt-6 pt-10">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Retrouvez-moi
         </h2>
