@@ -1,22 +1,24 @@
 import Link from "next/link";
 import clsx from "clsx";
-import { BsGithub, BsLinkedin, BsBriefcase } from "react-icons/bs";
+import { GithubIcon } from "@/components/ui/github-icon";
+import { LinkedinIcon } from "@/components/ui/linkedin-icon";
+import Stack3Icon from "@/components/ui/stack-3-icon";
 
 export const SocialMediaProfiles = [
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/julien-desbard",
-    icon: BsLinkedin,
+    Icon: LinkedinIcon,
   },
   {
     title: "GitHub",
     href: "https://github.com/Julien-Desbard",
-    icon: BsGithub,
+    Icon: GithubIcon,
   },
   {
     title: "Malt",
     href: "https://www.malt.fr/profile/juliendesbard",
-    icon: BsBriefcase,
+    Icon: Stack3Icon,
   },
 ];
 
@@ -34,13 +36,14 @@ const SocialMedia = ({ className, invert = false }) => {
         <li key={item.title}>
           <Link
             href={item.href}
+            target="blank"
             aria-label={item.title}
             className={clsx(
-              "transition",
-              invert ? "hover:text-neutral-200" : "hover:text-neutral-700"
+              "transition hover:text-[#D97706]",
+              invert ? "text-white" : "text-neutral-950"
             )}
           >
-            <item.icon className="h-6 w-6 fill-current" />
+            <item.Icon size={24} />
           </Link>
         </li>
       ))}

@@ -19,7 +19,7 @@ const stats = [
 
 const Clients = () => {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div data-invert className="section-appear mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-md font-semibold tracking-wider text-white sm:text-left">
@@ -33,7 +33,7 @@ const Clients = () => {
             className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-3"
           >
             {stats.map((stat) => (
-              <li key={stat.value}>
+              <li key={stat.value} className="min-w-0">
                 <FadeIn>
                   <p className="font-display text-4xl font-semibold text-white">
                     {stat.value}

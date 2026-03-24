@@ -13,6 +13,14 @@ import Offices from "./Offices";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
+// Liens de navigation — partagés entre la barre desktop et le menu mobile
+const NAV_LINKS = [
+  { href: "/work", label: "Réalisations" },
+  { href: "/process", label: "Notre process" },
+  { href: "/about", label: "À propos" },
+  { href: "/#contact", label: "Contact" },
+];
+
 const Header = ({
   panelId,
   invert = false,
@@ -21,7 +29,6 @@ const Header = ({
   onToggle,
   toggleRef,
 }) => {
-  // Container
   return (
     <Container>
       <div className="flex items-center justify-between">
@@ -29,36 +36,60 @@ const Header = ({
         <Link href={"/"} aria-label="Home">
           <Logo invert={invert}>Agence DBD</Logo>
         </Link>
+
+        {/* Liens de navigation inline — visibles uniquement sur desktop */}
+        <nav className="hidden lg:flex items-center gap-x-8">
+          {NAV_LINKS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={clsx(
+                "text-sm font-semibold transition-colors duration-200",
+                invert
+                  ? "text-white hover:text-[#d97706]"
+                  : "text-neutral-950 hover:text-[#d97706]"
+              )}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex items-center gap-x-8">
-          <Button href={"/contact"} invert={invert}>
+          <Button href={"/#contact"} invert={invert}>
             Demander un devis
           </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded.toString()}
-            aria-controls={panelId}
-            className={clsx(
-              "group -m-2.5 rounded-full p-2.5 transition",
-              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
+
+          {/* Hamburger — visible uniquement sur mobile */}
+          <div className="lg:hidden">
+            <button
+              ref={toggleRef}
+              type="button"
+              onClick={onToggle}
+              aria-expanded={expanded.toString()}
+              aria-controls={panelId}
               className={clsx(
-                "h-6 w-6",
-                invert
-                  ? "fill-white group-hover:fill-neutral-200"
-                  : "fill-neutral-950 group-hover:fill-neutral-700"
+                "group -m-2.5 rounded-full p-2.5 transition",
+                invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
               )}
-            />
-          </button>
+              aria-label="Toggle navigation"
+            >
+              <Icon
+                className={clsx(
+                  "h-6 w-6",
+                  invert
+                    ? "fill-white group-hover:fill-neutral-200"
+                    : "fill-neutral-950 group-hover:fill-neutral-700"
+                )}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </Container>
   );
 };
+
 const NavigationRow = ({ children }) => {
   return (
     <div className="even:mt-px sm:bg-neutral-950">
@@ -86,11 +117,11 @@ const Navigation = () => {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">Réalisations</NavigationItem>
-        <NavigationItem href="/about">À propos</NavigationItem>
+        <NavigationItem href="/process">Notre process</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Notre process</NavigationItem>
-        <NavigationItem href="/contact">Contact</NavigationItem>
+        <NavigationItem href="/about">À propos</NavigationItem>
+        <NavigationItem href="/#contact">Contact</NavigationItem>
       </NavigationRow>
     </nav>
   );
@@ -99,10 +130,14 @@ const Navigation = () => {
 const RootLayoutInner = ({ children }) => {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
+  // scrollInvert : true quand la navbar passe au-dessus d'une section sombre
+  const [scrollInvert, setScrollInvert] = useState(false);
   const openRef = useRef();
   const closeRef = useRef();
   const navRef = useRef();
   const shouldReduceMotion = useReducedMotion();
+
+  // Ferme le menu si on clique sur un lien pointant vers la page actuelle
   useEffect(() => {
     function onClick(event) {
       if (event.target.closest("a")?.href === window.location.href) {
@@ -110,25 +145,56 @@ const RootLayoutInner = ({ children }) => {
       }
     }
     window.addEventListener("click", onClick);
-
-    return () => {
-      window.removeEventListener("click", onClick);
-    };
+    return () => window.removeEventListener("click", onClick);
   }, []);
+
+  // Détecte si la navbar est au-dessus d'une section à fond sombre [data-invert]
+  useEffect(() => {
+    // Hauteur approximative de la navbar fixe en pixels
+    const NAV_HEIGHT = 72;
+
+    const check = () => {
+      const darkSections = document.querySelectorAll("[data-invert]");
+      let shouldInvert = false;
+
+      darkSections.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        // La section est sous la navbar si son haut est au-dessus de NAV_HEIGHT
+        // et son bas est encore dans le viewport
+        if (rect.top <= NAV_HEIGHT && rect.bottom >= 0) {
+          shouldInvert = true;
+        }
+      });
+
+      setScrollInvert(shouldInvert);
+    };
+
+    window.addEventListener("scroll", check, { passive: true });
+    check(); // Vérification au chargement initial
+    return () => window.removeEventListener("scroll", check);
+  }, []);
+
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
+        {/* Navbar fixe — toujours visible en haut de page */}
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          style={{ borderBottomLeftRadius: 40, borderBottomRightRadius: 40 }}
+          className={clsx(
+            "fixed left-0 right-0 top-0 z-40 py-5 transition-colors duration-300",
+            scrollInvert
+              ? "bg-neutral-950"
+              : "bg-white"
+          )}
           aria-hidden={expanded ? "true" : undefined}
           inert={expanded ? "" : undefined}
         >
-          {/* Header */}
           <Header
             panelId={panelId}
             icon={HiMenuAlt4}
             toggleRef={openRef}
             expanded={expanded}
+            invert={scrollInvert}
             onToggle={() => {
               setExpanded((expanded) => !expanded);
               window.setTimeout(() =>
@@ -137,10 +203,12 @@ const RootLayoutInner = ({ children }) => {
             }}
           />
         </div>
+
+        {/* Menu mobile plein écran — même comportement qu'avant */}
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? "auto" : "0.5rem" }}
+          style={{ height: expanded ? "auto" : 0 }}
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
@@ -187,10 +255,16 @@ const RootLayoutInner = ({ children }) => {
           </motion.div>
         </motion.div>
       </header>
+
+      {/*
+        Zone de contenu principale.
+        mt-16 : pousse la carte blanche juste en-dessous de la navbar fixe
+        (la navbar fait ~66px, le menu mobile fermé fait 8px, 8+64=72px ≈ hauteur nav)
+      */}
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-white mt-16 pt-14"
       >
         <motion.div
           layout

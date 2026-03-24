@@ -5,7 +5,7 @@ import { GridList, GridListItem } from "./GridList";
 
 const Cultures = () => {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div data-invert className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Mes engagements"
         title="Ce sur quoi vous pouvez compter."

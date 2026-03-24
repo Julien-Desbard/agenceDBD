@@ -1,3 +1,52 @@
 @import "./base.css";
 @tailwind components;
 @tailwind utilities;
+
+/* Compense la navbar fixe (72px) pour tous les anchors du site */
+html {
+  scroll-padding-top: 72px;
+}
+
+/* Animation text-focus-in — appliquée sur "Soyez visible" (page d'accueil) */
+.text-focus-in {
+  transition: 3s;
+  animation: text-focus-in 1s ease-in forwards;
+  animation-delay: 0.5s;
+  opacity: 0; /* évite le flash avant que l'animation démarre */
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Sous-titre — apparaît après la fin de text-focus-in (0.5s + 1s = 1.5s) */
+.subtitle-appear {
+  opacity: 0;
+  animation: subtitle-appear 0.6s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
+/* Section "Ce qui fait la différence" — apparaît après le sous-titre (1.5s + 0.6s = 2.1s) */
+.section-appear {
+  opacity: 0;
+  animation: subtitle-appear 0.6s ease-out forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes subtitle-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

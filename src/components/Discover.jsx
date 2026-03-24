@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import imageWhiteboard from "@/images/whiteboard.jpg";
+import imageWhiteboard from "@/images/whiteboard.webp";
 import { TagList, TagListItem } from "./TagList";
 
 const Discover = () => {
