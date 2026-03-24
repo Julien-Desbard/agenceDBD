@@ -5,51 +5,41 @@ import List, { ListItem } from "./List";
 
 const Deliver = () => {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 1 }}>
+    <Section title="Vous êtes en ligne" image={{ src: imageMeeting, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{" "}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          Votre site est{" "}
+          <strong className="font-semibold text-neutral-950">mis en ligne</strong>
+          , le nom de domaine est configuré. Tout est testé, tout fonctionne.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{" "}
-          <strong className="font-semibold text-neutral-950">progress</strong>{" "}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on Twitter.
+          Je vous{" "}
+          <strong className="font-semibold text-neutral-950">forme</strong> à
+          l’utilisation de votre site, y compris à la gestion de votre espace
+          d’administration si applicable. L’objectif : que vous soyez autonome
+          au lendemain de la livraison.
         </p>
         <p>
-          We ensure that the main pages of the site are{" "}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{" "}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{" "}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{" "}
-          retainer.
+          Et je reste{" "}
+          <strong className="font-semibold text-neutral-950">disponible</strong>{" "}
+          après la mise en ligne pour les ajustements, les questions et la suite.
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Ce qui est inclus
       </h3>
       <List>
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+        <ListItem title="Mise en ligne">
+          Configuration du nom de domaine, hébergement, SSL. Votre site est
+          accessible et sécurisé dès le premier jour.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+        <ListItem title="Formation">
+          Je vous montre comment mettre à jour votre contenu, gérer vos images
+          et utiliser votre espace d’administration en autonomie.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+        <ListItem title="Support après livraison">
+          Disponible pour les ajustements post-livraison et vos questions
+          techniques. Vous n’êtes pas seul une fois le projet terminé.
         </ListItem>
       </List>
     </Section>

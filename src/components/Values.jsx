@@ -13,43 +13,24 @@ const Values = () => {
           yOffset={-270}
         />
       </div>
-      <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
-      >
+      <SectionIntro eyebrow="Mes valeurs" title="Ce qui guide chaque projet.">
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          Trois principes simples que j'applique systématiquement, quel que
+          soit le projet.
         </p>
       </SectionIntro>
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Réactivité">
+            Vous recevez une estimation sous 24h — vous savez rapidement si votre projet est faisable et à quel coût.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Transparence">
+            Prix fixe, périmètre clair, pas de coûts cachés. Ce qui est écrit
+            dans le devis,  c'est ce qui est livré.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
-          </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
-          </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
-          </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Qualité">
+            Sites rapides, sécurisés, conformes aux standards du web et bien
+            référencés sur Google.
           </GridListItem>
         </GridList>
       </Container>

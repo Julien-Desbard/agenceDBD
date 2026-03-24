@@ -1,34 +1,22 @@
 import Link from "next/link";
 import clsx from "clsx";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsGithub,
-  BsYoutube,
-  BsLinkedin,
-} from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsBriefcase } from "react-icons/bs";
 
 export const SocialMediaProfiles = [
   {
-    title: "Youtube",
-    href: "https://www.youtube.com/watch?v=eAswnbWptBM",
-    icon: BsYoutube,
-  },
-  { title: "GitHub", href: "https://github.com/chrhi", icon: BsGithub },
-  {
-    title: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100010070348939",
-    icon: BsFacebook,
-  },
-  {
-    title: "linkedin",
-    href: "https://www.linkedin.com/in/chehri-abdellah-4a8858267/",
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/julien-desbard",
     icon: BsLinkedin,
   },
   {
-    title: "Twitter",
-    href: "https://twitter.com/KING_IN_JUNGLE",
-    icon: BsTwitter,
+    title: "GitHub",
+    href: "https://github.com/Julien-Desbard",
+    icon: BsGithub,
+  },
+  {
+    title: "Malt",
+    href: "https://www.malt.fr/profile/juliendesbard",
+    icon: BsBriefcase,
   },
 ];
 

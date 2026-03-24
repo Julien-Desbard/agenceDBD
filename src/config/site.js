@@ -1,6 +1,7 @@
 export function constructMetadata({
-  title = "Abdullah Agency ",
-  description = "Abdullah Agency is an open-source website.",
+  title = "Agence DBD — Développement web pour TPE/PME",
+  description =
+    "Julien Desbard, développeur web freelance. Je crée des sites rapides, bien référencés et faciles à gérer pour les TPE/PME, artisans et collectivités.",
   image = "/agency.PNG",
   icons = "/favicon.ico",
   noIndex = false,
@@ -22,10 +23,9 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@KING_IN_JUNGLE",
+      creator: "@agencedbd",
     },
     icons,
-    metadataBase: new URL("https://agency-website-abdullah.vercel.app/"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {

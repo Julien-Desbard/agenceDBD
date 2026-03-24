@@ -7,27 +7,30 @@ const Cultures = () => {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Mes engagements"
+        title="Ce sur quoi vous pouvez compter."
         invert
       >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Un seul interlocuteur" invert>
+            Du début à la fin, vous parlez directement avec moi.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Des résultats" invert>
+            Je vous explique les choses clairement, sans jargon ni termes techniques.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Transparence" invert>
+            Périmètre clair, prix fixe. Vous savez
+            ce qui est inclus avant de signer.
+          </GridListItem>
+          <GridListItem title="Qualité et conformité" invert>
+            Sites rapides, bien référencés, sécurisés et conformes aux
+            standards du web et exigences RGAA.
+          </GridListItem>
+          <GridListItem title="Suivi après livraison" invert>
+            Une fois votre site en ligne, je reste disponible. Pour les
+            ajustements, les questions, et la suite.
           </GridListItem>
         </GridList>
       </Container>

@@ -2,15 +2,14 @@ import { SocialMediaProfiles } from "@/components/SocialMedia";
 
 export const navigation = [
   {
-    title: "Work",
+    title: "Réalisations",
     links: [
-      { title: "AH MANA3RAF", href: "/work/amazonclone" },
-      { title: "AH MANA3RAF", href: "/work/bazar" },
-      { title: "AH MANA3RAF", href: "/work/blog101" },
+      { title: "Bar du Centre", href: "/work" },
+      { title: "SmartRelance", href: "/work" },
       {
         title: (
           <>
-            See all <span aria-hidden="true">&rarr;</span>
+            Voir tout <span aria-hidden="true">&rarr;</span>
           </>
         ),
         href: "/work",
@@ -18,16 +17,15 @@ export const navigation = [
     ],
   },
   {
-    title: "Company",
+    title: "Agence",
     links: [
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Blog", href: "/blog" },
-      { title: "Contact us", href: "/contact" },
+      { title: "À propos", href: "/about" },
+      { title: "Notre process", href: "/process" },
+      { title: "Contact", href: "/contact" },
     ],
   },
   {
-    title: "Connect",
+    title: "Suivre",
     links: SocialMediaProfiles,
   },
 ];

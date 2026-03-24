@@ -1,44 +1,60 @@
-import ContactSection from "@/components/ContactSection";
-import Container from "@/components/Container";
-import Cultures from "@/components/Cultures";
-import PageIntro from "@/components/PageIntro";
-import { StatList, StatListItem } from "@/components/StatList";
-import React from "react";
+import ContactSection from '@/components/ContactSection'
+import Container from '@/components/Container'
+import Cultures from '@/components/Cultures'
+import PageIntro from '@/components/PageIntro'
+import { StatList, StatListItem } from '@/components/StatList'
+import React from 'react'
 
 const AboutPage = () => {
-  return (
-    <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
-        <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
-        </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
-        </div>
-      </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container>
-      <Cultures />
-      <ContactSection />
-    </>
-  );
-};
+	return (
+		<>
+			<PageIntro
+				eyebrow="À propos"
+				title="Un développeur web qui connaît la réalité du terrain"
+			>
+				<p>
+					Avant de devenir développeur web, j'ai passé vingt ans dans des
+					environnements où il fallait livrer, écouter et s'adapter. Ce parcours
+					change la façon dont je travaille avec vous.
+				</p>
+				<div className="mt-10 max-w-2xl space-y-6 text-base">
+					<p>
+						J'ai créé et dirigé ma propre entreprise de diagnostics immobiliers.
+						J'ai piloté des équipes et des projets opérationnels sur plusieurs
+						pays. J'ai passé des années en relation client, à comprendre des
+						besoins et résoudre des problèmes concrets. Et j'ai dirigé un pôle
+						audit, où chaque détail compte et où la conformité n'est pas une
+						option.
+					</p>
 
-export default AboutPage;
+					<p>
+						Aujourd'hui, je mets cette expérience au service de votre présence
+						en ligne. Quand vous m'expliquez votre besoin, je comprends ce qu'il
+						y a derrière — vos contraintes, votre public, vos obligations. Et je
+						conçois un site qui y répond vraiment.
+					</p>
+				</div>
+			</PageIntro>
+			<Container className="mt-16">
+				<StatList>
+					<StatListItem
+						value="20 ans"
+						label="de pilotage de projets, de la conception à la livraison"
+					/>
+					<StatListItem
+						value="Entrepreneur"
+						label="Ancien dirigeant d'entreprise — je connais vos contraintes"
+					/>
+					<StatListItem
+						value="Écoute & rigueur"
+						label="Formé par des années de relation client et d'audit terrain"
+					/>
+				</StatList>
+			</Container>
+			<Cultures />
+			<ContactSection />
+		</>
+	)
+}
+
+export default AboutPage

@@ -9,30 +9,34 @@ const ContactDetails = () => {
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+        Localisation
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+        Basé au Pont-de-Beauvoisin, en Auvergne-Rhône-Alpes. Disponible en
+        remote partout en France.
       </p>
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
+          Me contacter directement
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ["Careers", "reactjsbd.com"],
-            ["Press", "noorjsdivs@gmail.com"],
-          ].map(([label, email]) => (
-            <div key={email}>
+            ["Email", "julien.desbard@gmail.com"],
+            ["Téléphone", "06 69 12 08 85"],
+          ].map(([label, contact]) => (
+            <div key={contact}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
               <dd>
                 <Link
-                  href={`mailto:${email}`}
+                  href={
+                    label === "Email"
+                      ? `mailto:${contact}`
+                      : `tel:${contact.replace(/\s/g, "")}`
+                  }
                   className="text-neutral-600 hover:text-neutral-950"
                 >
-                  {email}
+                  {contact}
                 </Link>
               </dd>
             </div>
@@ -41,7 +45,7 @@ const ContactDetails = () => {
       </Border>
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
+          Retrouvez-moi
         </h2>
         <SocialMedia className="mt-6" />
       </Border>

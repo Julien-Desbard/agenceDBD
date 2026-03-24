@@ -3,9 +3,9 @@ import GridPattern from "./GridPattern";
 import clsx from "clsx";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
-import Image from "next/image";
 
-const Testimonials = ({ children, client, className }) => {
+// Temoignage de Mani Saeidi -- 11/03/2026
+const Testimonials = ({ children, className }) => {
   return (
     <div
       className={clsx(
@@ -21,12 +21,16 @@ const Testimonials = ({ children, client, className }) => {
         <FadeIn>
           <figure className="mx-auto max-w-4xl">
             <blockquote className="relative font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
+              <p>
+                {"\u201c"}
                 {children}
+                {"\u201d"}
               </p>
             </blockquote>
             <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
+              <p className="text-xl font-display font-semibold text-neutral-950">
+                Mani Saeidi <span className="text-base font-normal italic hover:text-[#D97706] duration-300">- Client (<a href="https://www.bdc-angers.fr/#home" target="blank" className="underline underline-offset-2">Bar Du Centre</a>)</span>
+              </p>
             </figcaption>
           </figure>
         </FadeIn>

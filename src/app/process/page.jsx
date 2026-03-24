@@ -9,11 +9,10 @@ import React from "react";
 const ProcessPage = () => {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Notre process" title="Comment ça marche">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Trois étapes simples, de l’appel initial à la mise en ligne. Vous
+          savez toujours où nous en sommes et ce qui vient ensuite.
         </p>
       </PageIntro>
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
