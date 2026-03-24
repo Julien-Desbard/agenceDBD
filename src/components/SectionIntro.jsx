@@ -20,7 +20,7 @@ const SectionIntro = ({
               <span
                 className={clsx(
                   "mb-6 block font-display text-base font-semibold",
-                  invert ? "text-white" : "text-[#d97706]"
+                  invert ? "text-white" : "text-[#f38406]"
                 )}
               >
                 {eyebrow}

@@ -39,7 +39,7 @@ const SocialMedia = ({ className, invert = false }) => {
             target="blank"
             aria-label={item.title}
             className={clsx(
-              "transition hover:text-[#D97706]",
+              "transition hover:text-[#f38406]",
               invert ? "text-white" : "text-neutral-950"
             )}
           >

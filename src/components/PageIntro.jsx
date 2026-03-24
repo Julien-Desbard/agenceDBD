@@ -10,7 +10,7 @@ const PageIntro = ({ eyebrow, title, children, centered = false }) => {
     >
       <FadeIn>
         <h1>
-          <span className="block font-display text-base font-semibold text-[#d97706]">
+          <span className="block font-display text-base font-semibold text-[#f38406]">
             {eyebrow}
           </span>
           <span className="sr-only"> - </span>

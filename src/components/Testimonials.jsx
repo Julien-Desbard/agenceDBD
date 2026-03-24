@@ -29,7 +29,7 @@ const Testimonials = ({ children, className }) => {
             </blockquote>
             <figcaption className="mt-10">
               <p className="text-xl font-display font-semibold text-neutral-950">
-                Mani Saeidi <span className="text-base font-normal italic hover:text-[#D97706] duration-300">- Client (<a href="https://www.bdc-angers.fr/#home" target="blank" className="underline underline-offset-2">Bar Du Centre</a>)</span>
+                Mani Saeidi <span className="text-base font-normal italic hover:text-[#f38406] duration-300">- Client (<a href="https://www.bdc-angers.fr/#home" target="blank" className="underline underline-offset-2">Bar Du Centre</a>)</span>
               </p>
             </figcaption>
           </figure>

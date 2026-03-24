@@ -130,7 +130,7 @@ const WorkPage = () => {
 													href={project.href}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="hover:text-[#D97706] transition cursor-pointer"
+													className="hover:text-[#f38406] transition cursor-pointer"
 												>
 													{project.title}
 												</Link>

@@ -46,8 +46,8 @@ const Header = ({
               className={clsx(
                 "text-sm font-semibold transition-colors duration-200",
                 invert
-                  ? "text-white hover:text-[#d97706]"
-                  : "text-neutral-950 hover:text-[#d97706]"
+                  ? "text-white hover:text-[#f38406]"
+                  : "text-neutral-950 hover:text-[#f38406]"
               )}
             >
               {label}
