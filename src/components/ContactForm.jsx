@@ -8,6 +8,14 @@ const SelectInput = ({ name, placeholder, children }) => {
   const id = useId();
   return (
     <div className="group relative z-0 transition-all focus-within:z-10">
+      {/*
+        label sr-only : invisible visuellement mais lu par les lecteurs d'écran.
+        Associé via htmlFor={id} au <select> qui a le même id — WCAG 1.3.1.
+        Le placeholder visible ne suffit pas car il disparaît à la sélection.
+      */}
+      <label htmlFor={id} className="sr-only">
+        {placeholder}
+      </label>
       <select
         id={id}
         name={name}

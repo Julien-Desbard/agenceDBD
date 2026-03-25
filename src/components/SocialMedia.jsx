@@ -36,14 +36,16 @@ const SocialMedia = ({ className, invert = false }) => {
         <li key={item.title}>
           <Link
             href={item.href}
-            target="blank"
-            aria-label={item.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${item.title} (ouvre un nouvel onglet)`}
             className={clsx(
               "transition hover:text-[#f38406]",
               invert ? "text-white" : "text-neutral-950"
             )}
           >
-            <item.Icon size={24} />
+            {/* aria-hidden : l'icône est décorative, le aria-label du lien suffit */}
+            <item.Icon size={24} aria-hidden="true" />
           </Link>
         </li>
       ))}

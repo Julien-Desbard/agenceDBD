@@ -90,8 +90,12 @@ export default function Home() {
 			</Testimonials>
 			<Services />
 
-			{/* Section contact — accessible via /#contact depuis la navbar */}
-			<div id="contact" className="pb-12 sm:pb-16">
+			{/*
+				<section> plutôt que <div> : les lecteurs d'écran naviguent entre
+				les sections via la touche S — cette section devient découvrable.
+				aria-label : annoncé quand la section reçoit le focus.
+			*/}
+			<section id="contact" aria-label="Contact — Parlons de votre projet" className="pb-12 sm:pb-16">
 				<SectionIntro
 					eyebrow="Contact"
 					title="Parlons de votre projet"
@@ -108,7 +112,7 @@ export default function Home() {
 						<ContactForm />
 					</div>
 				</Container>
-			</div>
+			</section>
 		</main>
 	)
 }

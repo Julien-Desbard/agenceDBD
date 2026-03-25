@@ -38,7 +38,8 @@ const Header = ({
         </Link>
 
         {/* Liens de navigation inline — visibles uniquement sur desktop */}
-        <nav className="hidden lg:flex items-center gap-x-8">
+        {/* aria-label distingue cette nav des 2 autres présentes sur la page */}
+        <nav aria-label="Navigation principale" className="hidden lg:flex items-center gap-x-8">
           {NAV_LINKS.map(({ href, label }) => (
             <Link
               key={href}
@@ -114,7 +115,8 @@ const NavigationItem = ({ href, children }) => {
 
 const Navigation = () => {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    // aria-label distingue ce menu mobile de la navbar desktop
+    <nav aria-label="Menu mobile" className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">Réalisations</NavigationItem>
         <NavigationItem href="/process">Notre process</NavigationItem>
@@ -176,6 +178,19 @@ const RootLayoutInner = ({ children }) => {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
+      {/*
+        Skip link — visible uniquement au focus clavier (Tab).
+        Permet aux utilisateurs de lecteur d'écran / navigation au clavier
+        de sauter la navbar et d'aller directement au contenu principal.
+        WCAG 2.4.1 — obligatoire niveau AA.
+      */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >
+        Aller au contenu principal
+      </a>
+
       <header>
         {/* Navbar fixe — toujours visible en haut de page */}
         <div
@@ -270,7 +285,8 @@ const RootLayoutInner = ({ children }) => {
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
-          <main className="w-full flex-auto">{children}</main>
+          {/* id="main-content" est la cible du skip link ci-dessus */}
+          <main id="main-content" className="w-full flex-auto">{children}</main>
           {/* Footer */}
           <Footer />
         </motion.div>
