@@ -1,0 +1,35 @@
+# Agence DBD
+
+> Julien Desbard, développeur web freelance basé à Pont-de-Beauvoisin (Savoie, 73330).
+> Création et développement de sites web performants pour TPE, PME, artisans et collectivités.
+> 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.
+
+## Services
+
+- Création de sites vitrine (à partir de 1 500 €)
+- Refonte de sites existants (1 200 € – 3 500 €)
+- Sites institutionnels accessibles (norme RGAA)
+- Outils internes et dashboards sur mesure (3 000 € – 10 000 €)
+
+## Stack technique principal
+
+Next.js, TypeScript, Node.js, PostgreSQL, Strapi CMS, Prisma, Claude API
+
+## Zone d'intervention
+
+Savoie, Isère, Auvergne-Rhône-Alpes — remote sur toute la France
+
+## Pages principales
+
+- [Accueil](https://agence-dbd.vercel.app/): Services, témoignages, contact
+- [Réalisations](https://agence-dbd.vercel.app/work): Bar du Centre (restaurant Next.js/Strapi), Their Memory (bénévole), SmartConform (SaaS IA Claude API)
+- [Processus](https://agence-dbd.vercel.app/process): 3 étapes — cadrage (15-20 min gratuit) → devis sous 24h → développement → livraison
+- [À propos](https://agence-dbd.vercel.app/about): Parcours de Julien Desbard, engagements clients
+
+## Contact
+
+- Email: julien.desbard@gmail.com
+- Téléphone: 06 69 12 08 85
+- LinkedIn: https://www.linkedin.com/in/julien-desbard
+- GitHub: https://github.com/Julien-Desbard
+- Malt: https://www.malt.fr/profile/juliendesbard

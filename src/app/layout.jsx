@@ -31,6 +31,11 @@ export const metadata = {
 
   authors: [{ name: "Julien Desbard" }],
 
+  // URL canonique de la homepage — évite le contenu dupliqué (http/https, www, trailing slash)
+  alternates: {
+    canonical: "https://agence-dbd.vercel.app",
+  },
+
   // Open Graph : utilisé par les réseaux sociaux pour les previews de liens
   openGraph: {
     type: "website",
@@ -40,6 +45,7 @@ export const metadata = {
     title: "Agence DBD — Développeur web freelance en Savoie (73)",
     description:
       "Sites web performants, bien référencés, livrés avec rigueur. Basé à Pont-de-Beauvoisin, intervient dans toute la Savoie.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agence DBD" }],
   },
 
   // Autorise les robots à indexer et suivre les liens
@@ -55,37 +61,84 @@ export const metadata = {
     title: "Agence DBD — Développeur web freelance en Savoie (73)",
     description:
       "Sites web performants, bien référencés, livrés avec rigueur. Basé à Pont-de-Beauvoisin, intervient dans toute la Savoie.",
+    images: ["/og-image.png"],
   },
 };
 
 // ─── Données structurées Schema.org ──────────────────────────────────────────
 // Format JSON-LD recommandé par Google pour enrichir les résultats de recherche.
-// Google lit ce bloc pour comprendre qu'il s'agit d'un service professionnel
-// localisé — utile pour apparaître dans le pack local (carte + 3 résultats).
+// @id crée un identifiant stable permettant aux moteurs IA de relier les entités
+// entre elles (graphe de connaissance). sameAs lie l'entité à ses profils externes.
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://agence-dbd.vercel.app/#organization",
   name: "Agence DBD",
   url: "https://agence-dbd.vercel.app",
   description:
     "Développeur web freelance en Savoie. Sites performants, bien référencés, livrés avec rigueur.",
+  telephone: "+33669120885",
+  email: "julien.desbard@gmail.com",
+  priceRange: "€€",
+  serviceType: [
+    "Création de site vitrine",
+    "Refonte de site web",
+    "Site institutionnel",
+    "Outil interne et dashboard",
+  ],
   founder: {
     "@type": "Person",
+    "@id": "https://agence-dbd.vercel.app/#julien-desbard",
     name: "Julien Desbard",
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "",
+    // streetAddress omis intentionnellement (adresse personnelle non publiée)
     addressLocality: "Pont-de-Beauvoisin",
     postalCode: "73330",
-    addressRegion: "Savoie",
+    addressRegion: "Auvergne-Rhône-Alpes",
     addressCountry: "FR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 45.5308,
+    longitude: 5.6706,
   },
   areaServed: [
     { "@type": "City", name: "Pont-de-Beauvoisin" },
     { "@type": "AdministrativeArea", name: "Savoie" },
+    { "@type": "Country", name: "France" },
   ],
-  priceRange: "€€",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+33669120885",
+    email: "julien.desbard@gmail.com",
+    contactType: "customer service",
+    availableLanguage: "French",
+  },
+  // sameAs : liste les profils externes vérifiables — signal clé pour la
+  // reconnaissance d'entité par les moteurs IA (ChatGPT, Perplexity, Claude)
+  sameAs: [
+    "https://www.linkedin.com/in/julien-desbard",
+    "https://github.com/Julien-Desbard",
+    "https://www.malt.fr/profile/juliendesbard",
+  ],
+};
+
+// WebSite schema — lie le site à son éditeur et facilite la compréhension
+// de la structure globale par les moteurs de recherche et IA
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://agence-dbd.vercel.app/#website",
+  url: "https://agence-dbd.vercel.app",
+  name: "Agence DBD",
+  description: "Développeur web freelance en Savoie — Julien Desbard",
+  publisher: {
+    "@type": "ProfessionalService",
+    "@id": "https://agence-dbd.vercel.app/#organization",
+  },
+  inLanguage: "fr-FR",
 };
 
 export default function Layout({ children }) {
@@ -96,10 +149,14 @@ export default function Layout({ children }) {
       className="h-full bg-neutral-950 text-base antialiased text-neutral-100"
     >
       <body className="flex min-h-full flex-col">
-        {/* Bloc JSON-LD — invisible dans le rendu, lu par Google et les IA */}
+        {/* Blocs JSON-LD — invisibles dans le rendu, lus par Google et les IA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
         <RootLayout>{children}</RootLayout>
       </body>
