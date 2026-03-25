@@ -1,24 +1,50 @@
-# Abdullah Agency - Next.js, Tailwind CSS & Framer Motion
+# Agence DBD — Site vitrine
 
-![Abdullah Agency](/public/agency.PNG)
+Site vitrine de **Julien Desbard**, développeur web freelance basé à Pont-de-Beauvoisin (Savoie, 73).
 
-Abdullah Agency is a stunning multi-page agency website template developed using Next.js, Tailwind CSS, and Framer Motion. Designed and built by the talented Tailwind CSS team, this template offers a sleek and minimalist appearance while boasting engaging interactive elements and captivating animations powered by Framer Motion.
+🔗 [agence-dbd.vercel.app](https://agence-dbd.vercel.app)
 
-## Features
+---
 
-- Beautifully designed agency website template.
-- Built using Tailwind CSS and Next.js for a seamless development experience.
-- Enhanced with delightful animations and transitions through Framer Motion.
-- Easy-to-update case studies and blog posts with MDX.
-- Production-ready and highly customizable for your agency's specific needs.
-- A valuable resource for learning how to build websites with Tailwind CSS and React.
+## Stack
 
-## Getting Started
+- **Next.js 13.4** — App Router, rendu statique
+- **Tailwind CSS** — styles utilitaires
+- **Framer Motion v10** — animations
+- **pnpm** — gestionnaire de paquets
 
-To run the Abdullah Agency website locally, follow these steps:
+## Lancer le projet en local
 
-1. **Clone the repository:**
+```bash
+pnpm install
+pnpm dev
+```
 
-   ```bash
-   git clone https://github.com/your-username/abdullah-agency.git
-   ```
+Ouvrir [http://localhost:3000](http://localhost:3000).
+
+## Build de production
+
+```bash
+pnpm build
+```
+
+## Structure
+
+```text
+src/
+├── app/
+│   ├── layout.jsx          # Metadata globale, schema.org JSON-LD
+│   ├── page.jsx            # Accueil (hero, stats, témoignage, services, contact)
+│   ├── about/              # À propos
+│   ├── work/               # Réalisations
+│   ├── process/            # Notre process
+│   ├── sitemap.js          # /sitemap.xml
+│   └── robots.js           # /robots.txt
+└── components/             # Composants réutilisables
+```
+
+## Déploiement
+
+Le site est déployé sur **Vercel** à partir de la branche `main`.
+
+> Ne pas déclencher de déploiement manuel sans nécessité — Vercel déploie automatiquement à chaque merge sur `main`.
