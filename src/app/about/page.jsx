@@ -3,6 +3,61 @@ export const metadata = {
 	title: 'À propos',
 	description:
 		"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit au service de votre présence en ligne.",
+	alternates: {
+		canonical: 'https://agence-dbd.vercel.app/about',
+	},
+	openGraph: {
+		title: 'À propos | Agence DBD',
+		description:
+			"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.",
+		url: 'https://agence-dbd.vercel.app/about',
+		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence DBD' }],
+	},
+}
+
+// Schema Person — identifie Julien Desbard comme entité humaine vérifiable
+// sameAs relie ses profils externes au graphe de connaissance des moteurs IA
+const personLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	'@id': 'https://agence-dbd.vercel.app/#julien-desbard',
+	name: 'Julien Desbard',
+	url: 'https://agence-dbd.vercel.app/about',
+	jobTitle: 'Développeur web freelance',
+	description:
+		"Développeur web freelance basé à Pont-de-Beauvoisin (Savoie). Spécialisé en Next.js et TypeScript. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.",
+	email: 'julien.desbard@gmail.com',
+	telephone: '+33669120885',
+	worksFor: {
+		'@type': 'ProfessionalService',
+		'@id': 'https://agence-dbd.vercel.app/#organization',
+	},
+	knowsAbout: [
+		'Développement web',
+		'Next.js',
+		'TypeScript',
+		'React',
+		'Node.js',
+		'PostgreSQL',
+		'SEO technique',
+		'Accessibilité web RGAA',
+		'Gestion de projet',
+	],
+	sameAs: [
+		'https://www.linkedin.com/in/julien-desbard',
+		'https://github.com/Julien-Desbard',
+		'https://www.malt.fr/profile/juliendesbard',
+	],
+}
+
+// BreadcrumbList — améliore l'affichage dans les résultats de recherche
+const breadcrumbLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-dbd.vercel.app/' },
+		{ '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://agence-dbd.vercel.app/about' },
+	],
 }
 
 import Container from '@/components/Container'
@@ -17,6 +72,8 @@ import React from 'react'
 const AboutPage = () => {
 	return (
 		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 			<PageIntro
 				eyebrow="À propos"
 				title="Un développeur web qui connaît la réalité du terrain"

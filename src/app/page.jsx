@@ -20,7 +20,8 @@ const faqJsonLd = {
 			name: 'Combien coûte la création d\'un site web ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: 'Chaque projet est différent. Vous recevez une estimation chiffrée et détaillée sous 24h après notre premier échange, sans engagement.',
+				// Réponse citable par les IA : fourchettes tarifaires concrètes
+				text: 'Un site vitrine démarre à partir de 1 500 €. Une refonte de site se situe généralement entre 1 200 € et 3 500 €. Un outil interne sur mesure varie entre 3 000 € et 10 000 € selon la complexité. Chaque projet fait l\'objet d\'une estimation détaillée sous 24h, sans engagement.',
 			},
 		},
 		{

@@ -3,6 +3,72 @@ export const metadata = {
 	title: 'Réalisations',
 	description:
 		'Projets web livrés par Agence DBD : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
+	alternates: {
+		canonical: 'https://agence-dbd.vercel.app/work',
+	},
+	openGraph: {
+		title: 'Réalisations | Agence DBD',
+		description:
+			'Projets web livrés par Agence DBD : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
+		url: 'https://agence-dbd.vercel.app/work',
+		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence DBD' }],
+	},
+}
+
+// BreadcrumbList — améliore l'affichage dans les résultats de recherche
+const breadcrumbLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-dbd.vercel.app/' },
+		{ '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://agence-dbd.vercel.app/work' },
+	],
+}
+
+// ItemList — expose les projets comme entités structurées lisibles par les IA
+const itemListLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'Réalisations — Agence DBD',
+	url: 'https://agence-dbd.vercel.app/work',
+	itemListElement: [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			item: {
+				'@type': 'CreativeWork',
+				name: 'Bar du Centre — Angers',
+				description:
+					"Site complet d'une brasserie angevine réalisé en 2025. Next.js, Strapi CMS, PostgreSQL. Le client gère ses contenus en autonomie.",
+				url: 'https://bdc-angers.fr',
+				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+			},
+		},
+		{
+			'@type': 'ListItem',
+			position: 2,
+			item: {
+				'@type': 'CreativeWork',
+				name: 'Their Memory — Mémoire collective en ligne',
+				description:
+					'Contribution bénévole en 2025 à theirmemory.org : nouvelles fonctionnalités, UI et base de données. Next.js, TypeScript, PostgreSQL.',
+				url: 'https://theirmemory.org',
+				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+			},
+		},
+		{
+			'@type': 'ListItem',
+			position: 3,
+			item: {
+				'@type': 'CreativeWork',
+				name: 'SmartConform — Conformité documentaire par IA',
+				description:
+					"Application SaaS (2025) permettant aux TPE/PME de suivre leurs documents réglementaires. L'IA (Claude API) extrait les dates de validité et envoie des alertes avant expiration. Next.js 15, TypeScript, PostgreSQL, Prisma.",
+				url: 'https://smart-relance.vercel.app',
+				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+			},
+		},
+	],
 }
 
 import PageIntro from '@/components/PageIntro'
@@ -90,6 +156,8 @@ const projects = [
 const WorkPage = () => {
 	return (
 		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
 			<PageIntro eyebrow="Réalisations" title="Des projets concrets, livrés.">
 				<p>
 					Trois réalisations récentes : des sites rapides, bien référencés, des

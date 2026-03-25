@@ -10,6 +10,16 @@ export const metadata = {
   title: "Notre process",
   description:
     "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
+  alternates: {
+    canonical: "https://agence-dbd.vercel.app/process",
+  },
+  openGraph: {
+    title: "Notre process | Agence DBD",
+    description:
+      "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
+    url: "https://agence-dbd.vercel.app/process",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agence DBD" }],
+  },
 };
 
 // ─── HowTo Schema (données structurées) ──────────────────────────────────────
@@ -44,13 +54,27 @@ const howToJsonLd = {
   ],
 };
 
+// BreadcrumbList — améliore l'affichage dans les résultats de recherche
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://agence-dbd.vercel.app/" },
+    { "@type": "ListItem", position: 2, name: "Notre process", item: "https://agence-dbd.vercel.app/process" },
+  ],
+};
+
 const ProcessPage = () => {
   return (
     <>
-      {/* Bloc JSON-LD HowTo — invisible dans le rendu, lu par Google */}
+      {/* Blocs JSON-LD — invisibles dans le rendu, lus par Google et les IA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
       <PageIntro eyebrow="Notre process" title="Comment ça marche">
