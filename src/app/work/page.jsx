@@ -2,16 +2,16 @@
 export const metadata = {
 	title: 'Réalisations',
 	description:
-		'Projets web livrés par Agence DBD : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
+		'Projets web livrés par Agence Versatile : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
 	alternates: {
 		canonical: 'https://agence-dbd.vercel.app/work',
 	},
 	openGraph: {
-		title: 'Réalisations | Agence DBD',
+		title: 'Réalisations | Agence Versatile',
 		description:
-			'Projets web livrés par Agence DBD : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
+			'Projets web livrés par Agence Versatile : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
 		url: 'https://agence-dbd.vercel.app/work',
-		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence DBD' }],
+		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence Versatile' }],
 	},
 }
 
@@ -29,7 +29,7 @@ const breadcrumbLd = {
 const itemListLd = {
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
-	name: 'Réalisations — Agence DBD',
+	name: 'Réalisations — Agence Versatile',
 	url: 'https://agence-dbd.vercel.app/work',
 	itemListElement: [
 		{
@@ -82,7 +82,7 @@ import imageBdc from '@/images/bdc.webp'
 import imageSmartconform from '@/images/smartconform.webp'
 import imageTheirmemory from '@/images/theirmemory.webp'
 
-// Données des projets — Agence DBD
+// Données des projets — Agence Versatile
 const projects = [
 	{
 		title: 'Bar du Centre — Angers',

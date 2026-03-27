@@ -8,3 +8,14 @@
   font-stretch: 75% 125%;
   src: url("../fonts//Mona-Sans.var.woff2");
 }
+
+/* Police Mistrully — script/brush, utilisée pour le logo "Versatile" dans le header.
+   Télécharger le fichier sur https://www.1001fonts.com/mistrully-font.html
+   et le placer dans src/fonts/Mistrully.woff2 (ou .otf si woff2 indisponible). */
+@font-face {
+  font-family: "Mistrully";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/Mistrully.ttf") format("truetype");
+}

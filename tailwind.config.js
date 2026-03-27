@@ -17,6 +17,8 @@ module.exports = {
           ["Mona Sans", ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
+        // Police script pour le logo "Versatile" dans le header
+        mistrully: ["Mistrully", "cursive"],
       },
     },
   },

@@ -20,7 +20,7 @@ export const navigation = [
     title: "Agence",
     links: [
       { title: "À propos", href: "/about" },
-      { title: "Notre process", href: "/process" },
+      { title: "Mon process", href: "/process" },
       { title: "Contact", href: "/contact" },
     ],
   },

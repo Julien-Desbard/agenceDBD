@@ -27,7 +27,7 @@ const MentionsLegalesPage = () => {
                 </p>
                 <p>
                   <strong className="text-neutral-950">Activité :</strong>{" "}
-                  Développeur web freelance — Agence DBD
+                  Développeur web freelance — Agence Versatile
                 </p>
                 <p>
                   <strong className="text-neutral-950">Adresse :</strong> Le

@@ -16,7 +16,7 @@ import Footer from "./Footer";
 // Liens de navigation — partagés entre la barre desktop et le menu mobile
 const NAV_LINKS = [
   { href: "/work", label: "Réalisations" },
-  { href: "/process", label: "Notre process" },
+  { href: "/process", label: "Mon process" },
   { href: "/about", label: "À propos" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -34,7 +34,10 @@ const Header = ({
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Agence DBD</Logo>
+          {/* Texte "Versatile" en police script Mistrully — fichier à placer dans src/fonts/ */}
+          <Logo invert={invert}>
+            <span className="font-mistrully font-normal text-3xl">Versatile</span>
+          </Logo>
         </Link>
 
         {/* Liens de navigation inline — visibles uniquement sur desktop */}

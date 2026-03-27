@@ -1,7 +1,7 @@
 import Container from "./Container";
 import FadeIn, { FadeInStagger } from "./FadeIn";
 
-// Chiffres clés — Agence DBD
+// Chiffres clés — Agence Versatile
 const stats = [
   {
     value: "20 ans",

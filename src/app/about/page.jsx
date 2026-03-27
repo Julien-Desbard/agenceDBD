@@ -7,11 +7,11 @@ export const metadata = {
 		canonical: 'https://agence-dbd.vercel.app/about',
 	},
 	openGraph: {
-		title: 'À propos | Agence DBD',
+		title: 'À propos | Agence Versatile',
 		description:
 			"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.",
 		url: 'https://agence-dbd.vercel.app/about',
-		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence DBD' }],
+		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence Versatile' }],
 	},
 }
 

@@ -5,20 +5,20 @@ import PageIntro from "@/components/PageIntro";
 import Values from "@/components/Values";
 import React from "react";
 
-// Métadonnées spécifiques à la page Notre process — surcharge le titre global
+// Métadonnées spécifiques à la page Mon process — surcharge le titre global
 export const metadata = {
-  title: "Notre process",
+  title: "Mon process",
   description:
     "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
   alternates: {
     canonical: "https://agence-dbd.vercel.app/process",
   },
   openGraph: {
-    title: "Notre process | Agence DBD",
+    title: "Mon process | Agence Versatile",
     description:
       "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
     url: "https://agence-dbd.vercel.app/process",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agence DBD" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agence Versatile" }],
   },
 };
 
@@ -29,7 +29,7 @@ export const metadata = {
 const howToJsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "Comment se déroule la création d'un site web avec Agence DBD",
+  name: "Comment se déroule la création d'un site web avec Agence Versatile",
   description:
     "Trois étapes simples, de l'appel initial à la mise en ligne. Vous savez toujours où nous en sommes et ce qui vient ensuite.",
   step: [
@@ -60,7 +60,7 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: "https://agence-dbd.vercel.app/" },
-    { "@type": "ListItem", position: 2, name: "Notre process", item: "https://agence-dbd.vercel.app/process" },
+    { "@type": "ListItem", position: 2, name: "Mon process", item: "https://agence-dbd.vercel.app/process" },
   ],
 };
 
@@ -77,7 +77,7 @@ const ProcessPage = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
-      <PageIntro eyebrow="Notre process" title="Comment ça marche">
+      <PageIntro eyebrow="Mon process" title="Comment ça marche">
         <p>
           Trois étapes simples, de l'appel initial à la mise en ligne. Vous
           savez toujours où nous en sommes et ce qui vient ensuite.
