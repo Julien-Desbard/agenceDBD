@@ -86,8 +86,10 @@ export default function Home() {
 			<Clients />
 			<Testimonials className="mt-24 sm:mt-32 lg:mt-40">
 				Julien a su répondre à mon besoin en toute autonomie, tout en restant à
-				l'écoute. Pédagogue, même avec un client novice, il a créé un site que
-				nous pouvons gérer facilement.
+				l'écoute. Pédagogue, même avec un client novice, <span className='underline underline-offset-4 decoration-[#f38406] decoration-2'>
+					il a créé un site que
+					nous pouvons gérer facilement.
+				</span>
 			</Testimonials>
 			<Services />
 

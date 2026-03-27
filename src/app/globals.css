@@ -50,3 +50,12 @@ html {
     transform: translateY(0);
   }
 }
+
+@keyframes drawUnderline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

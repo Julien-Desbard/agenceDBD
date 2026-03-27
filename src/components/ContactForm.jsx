@@ -110,7 +110,7 @@ const ContactForm = () => {
 
           <TextArea label="Message" name="message" required />
         </div>
-        <Button type="submit" className="mt-10">
+        <Button type="submit" className="mt-10 wobble-horizontal-top">
           Envoyer ma demande
         </Button>
       </form>
