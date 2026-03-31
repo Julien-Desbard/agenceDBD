@@ -4,13 +4,13 @@ export const metadata = {
 	description:
 		'Projets web livrés par Agence Versatile : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
 	alternates: {
-		canonical: 'https://agence-dbd.vercel.app/work',
+		canonical: 'https://agence-versatile.fr/',
 	},
 	openGraph: {
 		title: 'Réalisations | Agence Versatile',
 		description:
 			'Projets web livrés par Agence Versatile : site de restaurant avec CMS, application SaaS de conformité documentaire, contribution à un projet de mémoire collective.',
-		url: 'https://agence-dbd.vercel.app/work',
+		url: 'https://agence-versatile.fr/',
 		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence Versatile' }],
 	},
 }
@@ -20,8 +20,8 @@ const breadcrumbLd = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
 	itemListElement: [
-		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-dbd.vercel.app/' },
-		{ '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://agence-dbd.vercel.app/work' },
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-versatile.fr//' },
+		{ '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://agence-versatile.fr/' },
 	],
 }
 
@@ -30,7 +30,7 @@ const itemListLd = {
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
 	name: 'Réalisations — Agence Versatile',
-	url: 'https://agence-dbd.vercel.app/work',
+	url: 'https://agence-versatile.fr/',
 	itemListElement: [
 		{
 			'@type': 'ListItem',
@@ -41,7 +41,7 @@ const itemListLd = {
 				description:
 					"Site complet d'une brasserie angevine réalisé en 2025. Next.js, Strapi CMS, PostgreSQL. Le client gère ses contenus en autonomie.",
 				url: 'https://bdc-angers.fr',
-				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+				author: { '@type': 'Person', '@id': 'https://agence-versatile.fr//#julien-desbard' },
 			},
 		},
 		{
@@ -53,7 +53,7 @@ const itemListLd = {
 				description:
 					'Contribution bénévole en 2025 à theirmemory.org : nouvelles fonctionnalités, UI et base de données. Next.js, TypeScript, PostgreSQL.',
 				url: 'https://theirmemory.org',
-				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+				author: { '@type': 'Person', '@id': 'https://agence-versatile.fr//#julien-desbard' },
 			},
 		},
 		{
@@ -65,7 +65,7 @@ const itemListLd = {
 				description:
 					"Application SaaS (2025) permettant aux TPE/PME de suivre leurs documents réglementaires. L'IA (Claude API) extrait les dates de validité et envoie des alertes avant expiration. Next.js 15, TypeScript, PostgreSQL, Prisma.",
 				url: 'https://smart-relance.vercel.app',
-				author: { '@type': 'Person', '@id': 'https://agence-dbd.vercel.app/#julien-desbard' },
+				author: { '@type': 'Person', '@id': 'https://agence-versatile.fr//#julien-desbard' },
 			},
 		},
 	],
@@ -148,7 +148,7 @@ const projects = [
 			'Claude API (Anthropic)',
 			'Prisma',
 		],
-		href: 'https://smart-relance.vercel.app',
+		href: 'https://smart-conforme.vercel.app/',
 		image: imageSmartconform,
 	},
 ]
