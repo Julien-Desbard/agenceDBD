@@ -4,13 +4,13 @@ export const metadata = {
 	description:
 		"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit au service de votre présence en ligne.",
 	alternates: {
-		canonical: 'https://agence-dbd.vercel.app/about',
+		canonical: 'https://agence-versatile.fr/about',
 	},
 	openGraph: {
 		title: 'À propos | Agence Versatile',
 		description:
 			"Julien Desbard, développeur web freelance en Savoie. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.",
-		url: 'https://agence-dbd.vercel.app/about',
+		url: 'https://agence-versatile.fr/about',
 		images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Agence Versatile' }],
 	},
 }
@@ -20,9 +20,9 @@ export const metadata = {
 const personLd = {
 	'@context': 'https://schema.org',
 	'@type': 'Person',
-	'@id': 'https://agence-dbd.vercel.app/#julien-desbard',
+	'@id': 'https://agence-versatile.fr/#julien-desbard',
 	name: 'Julien Desbard',
-	url: 'https://agence-dbd.vercel.app/about',
+	url: 'https://agence-versatile.fr/about',
 	jobTitle: 'Développeur web freelance',
 	description:
 		"Développeur web freelance basé à Pont-de-Beauvoisin (Savoie). Spécialisé en Next.js et TypeScript. 20 ans d'expérience en gestion de projet, entrepreneuriat et audit.",
@@ -30,7 +30,7 @@ const personLd = {
 	telephone: '+33669120885',
 	worksFor: {
 		'@type': 'ProfessionalService',
-		'@id': 'https://agence-dbd.vercel.app/#organization',
+		'@id': 'https://agence-versatile.fr/#organization',
 	},
 	knowsAbout: [
 		'Développement web',
@@ -55,8 +55,8 @@ const breadcrumbLd = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
 	itemListElement: [
-		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-dbd.vercel.app/' },
-		{ '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://agence-dbd.vercel.app/about' },
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://agence-versatile.fr/' },
+		{ '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://agence-versatile.fr/about' },
 	],
 }
 

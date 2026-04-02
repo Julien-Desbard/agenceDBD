@@ -9,6 +9,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://agence-dbd.vercel.app/sitemap.xml",
+    sitemap: "https://agence-versatile.fr/sitemap.xml",
   };
 }

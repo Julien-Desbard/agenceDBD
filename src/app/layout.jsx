@@ -7,7 +7,7 @@ import "./globals.css";
 // `metadataBase` est obligatoire pour que Next.js génère des URLs absolues
 // (Open Graph, sitemap, canonical).
 export const metadata = {
-  metadataBase: new URL("https://agence-dbd.vercel.app"),
+  metadataBase: new URL("https://agence-versatile.fr"),
 
   // Template : chaque page injecte son titre à la place de "%s"
   // Ex : "Réalisations | Agence Versatile"
@@ -33,7 +33,7 @@ export const metadata = {
 
   // URL canonique de la homepage — évite le contenu dupliqué (http/https, www, trailing slash)
   alternates: {
-    canonical: "https://agence-dbd.vercel.app",
+    canonical: "https://agence-versatile.fr",
   },
 
   // Open Graph : utilisé par les réseaux sociaux pour les previews de liens
@@ -41,7 +41,7 @@ export const metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: "Agence Versatile",
-    url: "https://agence-dbd.vercel.app",
+    url: "https://agence-versatile.fr",
     title: "Agence Versatile — Développeur web freelance en Savoie (73)",
     description:
       "Sites web performants, bien référencés, livrés avec rigueur. Basé à Pont-de-Beauvoisin, intervient dans toute la Savoie.",
@@ -72,9 +72,9 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://agence-dbd.vercel.app/#organization",
+  "@id": "https://agence-versatile.fr/#organization",
   name: "Agence Versatile",
-  url: "https://agence-dbd.vercel.app",
+  url: "https://agence-versatile.fr",
   description:
     "Développeur web freelance en Savoie. Sites performants, bien référencés, livrés avec rigueur.",
   telephone: "+33669120885",
@@ -88,7 +88,7 @@ const jsonLd = {
   ],
   founder: {
     "@type": "Person",
-    "@id": "https://agence-dbd.vercel.app/#julien-desbard",
+    "@id": "https://agence-versatile.fr/#julien-desbard",
     name: "Julien Desbard",
   },
   address: {
@@ -130,13 +130,13 @@ const jsonLd = {
 const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://agence-dbd.vercel.app/#website",
-  url: "https://agence-dbd.vercel.app",
+  "@id": "https://agence-versatile.fr/#website",
+  url: "https://agence-versatile.fr",
   name: "Agence Versatile",
   description: "Développeur web freelance en Savoie — Julien Desbard",
   publisher: {
     "@type": "ProfessionalService",
-    "@id": "https://agence-dbd.vercel.app/#organization",
+    "@id": "https://agence-versatile.fr/#organization",
   },
   inLanguage: "fr-FR",
 };

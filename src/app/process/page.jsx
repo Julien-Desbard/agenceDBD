@@ -11,13 +11,13 @@ export const metadata = {
   description:
     "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
   alternates: {
-    canonical: "https://agence-dbd.vercel.app/process",
+    canonical: "https://agence-versatile.fr/process",
   },
   openGraph: {
     title: "Mon process | Agence Versatile",
     description:
       "Trois étapes de la conception à la mise en ligne : découverte du besoin, développement, livraison. Un process structuré, transparent, sans mauvaise surprise.",
-    url: "https://agence-dbd.vercel.app/process",
+    url: "https://agence-versatile.fr/process",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agence Versatile" }],
   },
 };
@@ -59,8 +59,8 @@ const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://agence-dbd.vercel.app/" },
-    { "@type": "ListItem", position: 2, name: "Mon process", item: "https://agence-dbd.vercel.app/process" },
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://agence-versatile.fr/" },
+    { "@type": "ListItem", position: 2, name: "Mon process", item: "https://agence-versatile.fr/process" },
   ],
 };
 

@@ -8,31 +8,31 @@
 export default function sitemap() {
   return [
     {
-      url: "https://agence-dbd.vercel.app",
+      url: "https://agence-versatile.fr",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://agence-dbd.vercel.app/work",
+      url: "https://agence-versatile.fr/work",
       lastModified: new Date("2025-01-15"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://agence-dbd.vercel.app/process",
+      url: "https://agence-versatile.fr/process",
       lastModified: new Date("2025-01-15"),
       changeFrequency: "yearly",
       priority: 0.7,
     },
     {
-      url: "https://agence-dbd.vercel.app/about",
+      url: "https://agence-versatile.fr/about",
       lastModified: new Date("2025-01-15"),
       changeFrequency: "yearly",
       priority: 0.6,
     },
     {
-      url: "https://agence-dbd.vercel.app/mentions-legales",
+      url: "https://agence-versatile.fr/mentions-legales",
       lastModified: new Date("2025-01-15"),
       changeFrequency: "yearly",
       priority: 0.3,

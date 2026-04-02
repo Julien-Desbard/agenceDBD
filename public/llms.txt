@@ -21,10 +21,10 @@ Savoie, Isère, Auvergne-Rhône-Alpes — remote sur toute la France
 
 ## Pages principales
 
-- [Accueil](https://agence-dbd.vercel.app/): Services, témoignages, contact
-- [Réalisations](https://agence-dbd.vercel.app/work): Bar du Centre (restaurant Next.js/Strapi), Their Memory (bénévole), SmartConform (SaaS IA Claude API)
-- [Processus](https://agence-dbd.vercel.app/process): 3 étapes — cadrage (15-20 min gratuit) → devis sous 24h → développement → livraison
-- [À propos](https://agence-dbd.vercel.app/about): Parcours de Julien Desbard, engagements clients
+- [Accueil](https://agence-versatile.fr/): Services, témoignages, contact
+- [Réalisations](https://agence-versatile.fr/work): Bar du Centre (restaurant Next.js/Strapi), Their Memory (bénévole), SmartConform (SaaS IA Claude API)
+- [Processus](https://agence-versatile.fr/process): 3 étapes — cadrage (15-20 min gratuit) → devis sous 24h → développement → livraison
+- [À propos](https://agence-versatile.fr/about): Parcours de Julien Desbard, engagements clients
 
 ## Contact
 
