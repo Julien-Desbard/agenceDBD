@@ -6,6 +6,7 @@ import FadeIn from '@/components/FadeIn'
 import SectionIntro from '@/components/SectionIntro'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
+import { BlurReveal } from '@/components/blur-reveal'
 
 // ─── FAQ Schema (données structurées) ────────────────────────────────────────
 // Format JSON-LD recommandé par Google pour les "résultats enrichis" (FAQ).
@@ -17,11 +18,11 @@ const faqJsonLd = {
 	mainEntity: [
 		{
 			'@type': 'Question',
-			name: 'Combien coûte la création d\'un site web ?',
+			name: "Combien coûte la création d'un site web ?",
 			acceptedAnswer: {
 				'@type': 'Answer',
 				// Réponse citable par les IA : fourchettes tarifaires concrètes
-				text: 'Un site vitrine démarre à partir de 1 500 €. Une refonte de site se situe généralement entre 1 200 € et 3 500 €. Un outil interne sur mesure varie entre 3 000 € et 10 000 € selon la complexité. Chaque projet fait l\'objet d\'une estimation détaillée sous 24h, sans engagement.',
+				text: "Un site vitrine démarre à partir de 1 500 €. Une refonte de site se situe généralement entre 1 200 € et 3 500 €. Un outil interne sur mesure varie entre 3 000 € et 10 000 € selon la complexité. Chaque projet fait l'objet d'une estimation détaillée sous 24h, sans engagement.",
 			},
 		},
 		{
@@ -37,7 +38,7 @@ const faqJsonLd = {
 			name: 'Vous intervenez uniquement en Savoie ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: 'Je suis basé à Pont-de-Beauvoisin (Savoie) mais j\'interviens à distance partout en France.',
+				text: "Je suis basé à Pont-de-Beauvoisin (Savoie) mais j'interviens à distance partout en France.",
 			},
 		},
 		{
@@ -53,7 +54,7 @@ const faqJsonLd = {
 			name: 'Proposez-vous un suivi après la mise en ligne ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: 'Oui. Je reste disponible pour les ajustements, les questions techniques et l\'évolution de votre site après la livraison.',
+				text: "Oui. Je reste disponible pour les ajustements, les questions techniques et l'évolution de votre site après la livraison.",
 			},
 		},
 	],
@@ -72,12 +73,13 @@ export default function Home() {
 				<FadeIn className="max-w-3xl">
 					<h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
 						Votre prochain client vous cherche.{' '}
-						<span className="text-[#f38406] text-focus-in">
-							Devenez visible
+						<span className="text-[#f38406]">
+							<BlurReveal speedReveal={0.4}>Devenez visible</BlurReveal>
 						</span>
 					</h1>
 					<p className="mt-6 text-xl text-neutral-600 subtitle-appear">
-						Je prends le temps de comprendre votre activité puis je conçois un site que votre public trouve utile et que Google met en avant.
+						Je prends le temps de comprendre votre activité puis je conçois un
+						site que votre public trouve utile et que Google met en avant.
 						<br />
 						Vous restez concentré sur votre métier. Vos clients vous trouvent.
 					</p>
@@ -86,9 +88,9 @@ export default function Home() {
 			<Clients />
 			<Testimonials className="mt-24 sm:mt-32 lg:mt-40">
 				Julien a su répondre à mon besoin en toute autonomie, tout en restant à
-				l'écoute. Pédagogue, même avec un client novice, <span className='underline underline-offset-4 decoration-[#f38406] decoration-2'>
-					il a créé un site que
-					nous pouvons gérer facilement.
+				l'écoute. Pédagogue, même avec un client novice,{' '}
+				<span className="underline underline-offset-4 decoration-[#f38406] decoration-2">
+					il a créé un site que nous pouvons gérer facilement.
 				</span>
 			</Testimonials>
 			<Services />
@@ -98,7 +100,11 @@ export default function Home() {
 				les sections via la touche S — cette section devient découvrable.
 				aria-label : annoncé quand la section reçoit le focus.
 			*/}
-			<section id="contact" aria-label="Contact — Parlons de votre projet" className="pb-12 sm:pb-16">
+			<section
+				id="contact"
+				aria-label="Contact — Parlons de votre projet"
+				className="pb-12 sm:pb-16"
+			>
 				<SectionIntro
 					eyebrow="Contact"
 					title="Parlons de votre projet"
